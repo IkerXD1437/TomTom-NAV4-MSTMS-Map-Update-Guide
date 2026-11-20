@@ -51,8 +51,9 @@ TomTom_NAV4_Utilities-By-IkerXD1437/
 * **`TTActivator-v1.22/`**: Contains **`TTActivator.exe`** (v1.22 by *master131*) plus `.sh` / `.command` launchers and `meta.txt`. Used to download official `.ttpkg` maps/speedcams and push them over USB.
 * **`meta.txt` (Root)**: Updated activation database ready to copy or push directly to the GPS via Option `5` in `Nav4Free.bat`.
 * **`Install_All_ttpkg_nav4 (Extras)/`** *(Optional Extras)*: Contains **`download_speedcam_1.7.exe`**, **`Install_All_ttpkg_nav4.exe`**, and **`Install_Safety_Cam_SD_menu.bat`**.
-  > [!NOTE]
-  > **About the `(Extras)` folder:** These command-line batch utilities work by placing `.ttpkg` files in the same directory or dragging them onto the `.exe`. They are included **strictly as optional extras** (handy for batch-installing speedcams)—they were **not needed** for the main map installation, because installing the `.ttpkg` map directly from **TTActivator** after freeing internal storage in **Team MSTMS** worked cleanly without hanging on `"Triggering device..."`.
+
+> [!NOTE]
+> **About the `(Extras)` folder:** These command-line batch utilities work by placing `.ttpkg` files in the same directory or dragging them onto the `.exe`. They are included **strictly as optional extras** (handy for batch-installing speedcams)—they were **not needed** for the main map installation, because installing the `.ttpkg` map directly from **TTActivator** after freeing internal storage in **Team MSTMS** worked cleanly without hanging on `"Triggering device..."`.
 
 ---
 
@@ -87,8 +88,10 @@ TomTom_NAV4_Utilities-By-IkerXD1437/
 2. **Power off** the TomTom completely.
 3. Press and **hold the Power button continuously** until the **black diagnostic screen with white system text** appears, then **quickly press the Power button 3 times**. The device will reboot and freeze on the **static TomTom logo** (Recovery Mode).
 4. Connect the TomTom to your PC via USB.
-   > [!CAUTION]
-   > Windows will pop up multiple dialogs saying *"You need to format the disk in drive X: before you can use it"*. **Click Cancel / Ignore on ALL of them!** Formatting those raw Linux partitions will brick the device.
+
+> [!CAUTION]
+> Windows will pop up multiple dialogs saying *"You need to format the disk in drive X: before you can use it"*. **Click Cancel / Ignore on ALL of them!** Formatting those raw Linux partitions will permanently damage the device.
+
 5. In **`Nav4Free.bat`**, type **`2`** (`Full Backup`) and press **Enter**. Wait until it completes (`Backup ended, stored in Executions/FullBackups/...`).
 
 #### 3. Enable ADB & Root Shell
@@ -103,6 +106,10 @@ TomTom_NAV4_Utilities-By-IkerXD1437/
 4. On the TomTom screen, tap **`Patch it`** and wait for confirmation (`Patching already done!`).
 5. Tap **`Activate available content`** on the TomTom screen.
 
+| 1. Team MSTMS Boot Screen | 2. `Free my NAV4!` — Patch & Activate |
+| :---: | :---: |
+| <img src="https://github.com/user-attachments/assets/c6ed16b8-167a-4ecb-a886-2681adff4e1d" width="380" alt="Team MSTMS Splash Screen"> | <img src="https://github.com/user-attachments/assets/9077cd96-3589-41d8-ab24-164753cc79b4" width="380" alt="Free my NAV4 Patch and Activate"> |
+
 #### 5. Upload Updated `meta.txt`
 1. Back in **`Nav4Free.bat`** on your PC, select **Option `5` (`Upload meta.txt to device`)**.
 2. Wait for `meta.txt: 1 file pushed... Done!`.
@@ -115,10 +122,14 @@ TomTom_NAV4_Utilities-By-IkerXD1437/
 > [!TIP]
 > On NAV4 units, MyDrive Connect refuses to delete the factory map, and TTActivator's *"Delete internal memory maps"* button is often **grayed out**. You do **not** need manual `adb shell` commands to clear space—do it directly on the GPS touchscreen:
 
-1. Open the **Team MSTMS (`FreeMyNav4`)** app on the TomTom touchscreen.
+1. Open the **Team MSTMS (`FreeMyNav4`)** package manager on the TomTom touchscreen.
 2. In the installed packages list, check the box for your **old factory map** *(e.g., `Europe 915.5053 (map, internal memory)`)* **AND its matching certificate** *(e.g., `DCT_Europe-xxx.meta (certificate, internal memory)`)*.
 3. Tap **`Remove selected`** in the bottom-left corner.
 4. Tap **`Back to main`**. You now have **5+ GB of free internal eMMC storage** ready for your updated map.
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/d673ddc7-d4bc-40e9-9755-f5232fca0e81" width="460" alt="Team MSTMS Package Manager on TomTom Screen">
+</div>
 
 ---
 
@@ -128,12 +139,21 @@ TomTom_NAV4_Utilities-By-IkerXD1437/
 2. Open **`TTActivator-v1.22/TTActivator.exe`**:
    * Go to the **Tools** tab and click **Update Meta.txt**.
    * Go to the **Map Downloader** tab.
-   * Select generation: **`NAV4`**.
-   * Choose your region *(e.g., **Iberia** ~500–900 MB, Southern Europe, or Europe)* and the latest version with a confirmed meta code *(verified: **`Iberia 1175.13264`**)*.
-   * **CRITICAL:** **UNCHECK `Auto-Extract`**! If left checked, TTActivator unpacks raw files (`.dat`, `.sqlite`, `.meta`) and the `.ttpkg` installer will see an empty folder.
-   * Click **Download to Folder** to save the clean `.ttpkg` package to your PC.
+   * Select generation: **`nav4`**.
+   * Choose your region *(e.g., **Iberia** ~500–1000 MB, Southern Europe, or Europe)* and the latest version with a confirmed meta code *(verified: **`Iberia 1175.13264`**)*.
+   * **CRITICAL:** **UNCHECK `Auto-Extract`** and confirm **Yes** on the popup! If left checked, TTActivator unpacks raw files (`.dat`, `.sqlite`, `.meta`) and the `.ttpkg` installer will see an empty folder.
+   * Click **Download To Folder** to save the clean `.ttpkg` package (`Iberia_1175_13264_tmp_0.ttpkg`) to your PC.
+
+| 1. Uncheck `Auto-Extract` (`nav4` / `1175`) | 2. Clean `.ttpkg` Package Downloaded |
+| :---: | :---: |
+| <img src="https://github.com/user-attachments/assets/567d3a9c-05e9-41db-a400-0c2e62efcf0c" width="380" alt="TTActivator Disable Auto-Extract"> | <img src="https://github.com/user-attachments/assets/c2023c3e-4fee-4cd7-9cbf-9edb2f1acf63" width="380" alt="TTActivator Map Downloaded as .ttpkg"> |
+
 3. Switch to the **NAV3/NAV4 Tools** tab in TTActivator.
-4. Click **`Install *.ttpkg files`**, select your downloaded `.ttpkg` map package, and wait for the transfer bar to reach **100%**.
+4. Click **`Install TT Package Files`**, select your downloaded `.ttpkg` map package, and wait for the transfer bar to reach **100%**.
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/64eb8845-0b71-42a3-acb1-e5f4c18a4d82" width="520" alt="TTActivator Install TT Package Files">
+</div>
 
 #### Mandatory Drum-Roll Hard Reset (If Stuck on "Updating...")
 Once the PC finishes at **100%**, the TomTom screen usually stays spinning indefinitely on **"Updating..."** because the installer does not send a session-close signal:
@@ -147,7 +167,7 @@ Once the PC finishes at **100%**, the TomTom screen usually stays spinning indef
 
 Map packages only include road speed limits—TomTom Speedcams are installed separately:
 
-* **Method A (TTActivator):** Use the **TT Speedcam Downloader** tab inside `TTActivator.exe` to download and push speedcams over USB.
+* **Method A (TTActivator):** Use the **Safety Cam Downloader** tab inside `TTActivator.exe` to download and push speedcams over USB.
 * **Method B (Batch Tool from `(Extras)`):**
   1. Ensure **MyDrive Connect** is closed.
   2. Open `Install_All_ttpkg_nav4 (Extras)/` and run **`download_speedcam_1.7.exe`** to download your region's `.ttpkg` speedcam files *(e.g., Spain/Iberia Premium)*.
@@ -169,7 +189,7 @@ Map packages only include road speed limits—TomTom Speedcams are installed sep
 
 | Issue | Cause | Fix |
 | :--- | :--- | :--- |
-| **No files appear when clicking `Install *.ttpkg`** | `Auto-Extract` was enabled in TTActivator | Uncheck **Auto-Extract** in Map Downloader and re-download so the file stays `.ttpkg`. |
+| **No files appear when clicking `Install TT Package Files`** | `Auto-Extract` was enabled in TTActivator | Uncheck **Auto-Extract** in Map Downloader and re-download so the file stays `.ttpkg`. |
 | **"Not enough space" & delete button is grayed out** | Factory map fills internal memory; TTActivator blocks deletion | Delete the old map + its `DCT_*.meta` certificate directly inside the **Team MSTMS** app on the TomTom screen (Phase 2). |
 | **Device not responding / connection error** | MyDrive Connect is hijacking the RNDIS port | Quit **MyDrive Connect** from the Windows system tray and Task Manager, then reconnect USB. |
 | **TomTom stuck spinning on "Updating..."** | Normal NAV4 behavior after 100% `.ttpkg` transfer | Unplug USB and hold Power for **20–30s** until the **drum-roll** sound (Hard Reset). |
