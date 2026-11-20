@@ -108,7 +108,9 @@ TomTom_NAV4_Utilities-By-IkerXD1437/
 2. **Power off** the TomTom completely.
 3. Press and **hold the Power button continuously** until the **black diagnostic screen with white system text** appears, then release and **quickly press the Power button 3 times**. The device will reboot and freeze on the **static TomTom logo** (Recovery Mode).
 
-<!-- PEGA AQUÍ EL ENLACE DE TU VÍDEO DE 15 SEGUNDOS DEL MODO RECUPERACIÓN CUANDO LO SUBAS -->
+
+https://github.com/user-attachments/assets/2d8c2d7c-b6a7-401f-ab3d-9bb58824bd87
+
 
 4. Launch **`Nav4Free.bat`** as Administrator, type **`2`** (`Create device full backup`) and press **Enter**.
 5. When asked `Is the device now DISCONNECTED ? (y/n)?`, keep the TomTom unplugged, type **`y`** and press **Enter**.
