@@ -19,27 +19,27 @@
 
 ---
 
-## Download Mirrors
+## Downloads (Releases)
+
+All utility packages are available directly in the **[Releases](../../releases)** section of this repository:
 
 ### Main Utilities & 10-Language Guide (`199.4 MB`)
 
-| Mirror | Host | Direct Link | Notes |
-| :--- | :--- | :--- | :--- |
-| **Mirror 1** | Internet Archive | **[Download from Archive.org](https://archive.org/details/tom-tom-nav-4-utilities-by-iker-xd-1437)** | Permanent preservation mirror |
-| **Mirror 2** | MediaFire | **[Download from MediaFire](https://www.mediafire.com/file/uqqajs69s6ndcou/TomTom_NAV4_Utilities-By-IkerXD1437.zip/file)** | Fast permanent mirror |
-| **Mirror 3** | Gofile | **[Download from Gofile](https://gofile.io/d/QAPp1aHX)** | High-speed direct mirror |
+| Package | Location | Notes |
+| :--- | :--- | :--- |
+| **`TomTom_NAV4_Utilities-By-IkerXD1437.zip`** | **[GitHub Releases](../../releases)** | Full utility pack + offline 10-language `README.txt` |
 
 #### File Verification (SHA-256)
-* **Archive:** `TomTom_NAV4_Utilities-By-IkerXD1437.zip` *(includes 10-language `README.txt`)*
+- **Archive:** `TomTom_NAV4_Utilities-By-IkerXD1437.zip` *(includes 10-language `README.txt`)*
 ```text
 14b90ae8a7f216fdc3447574f0657753634d697e4fca880a2febd11818c58b1d
 ```
 
 ### Community Speedcam Backup Pack (`3.5 MB`)
 
-| Package | Host | Direct Link | Contents |
-| :--- | :--- | :--- | :--- |
-| **Europe Speedcams (`22-10-2026`)** | MEGA | **[Download `17 22-10-2026.rar`](https://mega.nz/file/eVhnBawJ#M-GuNkL7w-6RT8rfm9AsUagUY43Z6GhZ7zDgQgxiU-w)** | 31 verified non-empty `.ttpkg` files (`ES`, `PT`, `FR`, `IT`, `DE`, `UK`, etc.) — courtesy of *papitchulo* (GPSurl) |
+| Package | Location | Contents |
+| :--- | :--- | :--- |
+| **`17 22-10-2026.rar`** *(Europe Speedcams `22-10-2026`)* | **[GitHub Releases](../../releases)** | 31 verified non-empty `.ttpkg` files (`ES`, `PT`, `FR`, `IT`, `DE`, `UK`, etc.) — courtesy of *papitchulo* |
 
 ---
 
@@ -55,10 +55,10 @@ TomTom_NAV4_Utilities-By-IkerXD1437/
 ```
 
 ### Detailed Folder Breakdown
-* **`MSTMS-Nav4-Navcore22.100-25.100/`**: Contains **`Nav4Free.bat`** (Windows) and **`Nav4Free.sh`** (Linux/macOS), along with **`files/MSTMS_NAV4Free.img`** (Magic SD image), **`files/FreeMyNav4.apk`**, **`TTInstall.Mini-20200829.exe`**, `windows/` ADB/LTools binaries, and `Executions/` (where full NAND backups are stored).
-* **`TTActivator-v1.22/`**: Contains **`TTActivator.exe`** (v1.22 by *master131*) plus `.sh` / `.command` launchers and `meta.txt`. Used to download official `.ttpkg` maps/speedcams and push them over USB.
-* **`meta.txt` (Root)**: Updated activation database ready to copy or push directly to the GPS via Option `5` in `Nav4Free.bat`.
-* **`Install_All_ttpkg_nav4 (Extras)/`** *(Optional Extras)*: Contains **`download_speedcam_1.7.exe`**, **`Install_All_ttpkg_nav4.exe`**, and **`Install_Safety_Cam_SD_menu.bat`**.
+- **`MSTMS-Nav4-Navcore22.100-25.100/`**: Contains **`Nav4Free.bat`** (Windows) and **`Nav4Free.sh`** (Linux/macOS), along with **`files/MSTMS_NAV4Free.img`** (Magic SD image), **`files/FreeMyNav4.apk`**, **`TTInstall.Mini-20200829.exe`**, `windows/` ADB/LTools binaries, and `Executions/` (where full NAND backups are stored).
+- **`TTActivator-v1.22/`**: Contains **`TTActivator.exe`** (v1.22 by *master131*) plus `.sh` / `.command` launchers and `meta.txt`. Used to download official `.ttpkg` maps/speedcams and push them over USB.
+- **`meta.txt` (Root)**: Updated activation database ready to copy or push directly to the GPS via Option `5` in `Nav4Free.bat`.
+- **`Install_All_ttpkg_nav4 (Extras)/`** *(Optional Extras)*: Contains **`download_speedcam_1.7.exe`**, **`Install_All_ttpkg_nav4.exe`**, and **`Install_Safety_Cam_SD_menu.bat`**.
 
 > [!NOTE]
 > **About the `(Extras)` folder:** These command-line batch utilities work by placing `.ttpkg` files in the same directory or dragging them onto the `.exe`. They are included **strictly as optional extras** (handy for batch-installing speedcams)—they were **not needed** for the main map installation, because installing the `.ttpkg` map directly from **TTActivator** after freeing internal storage in **Team MSTMS** worked cleanly without hanging on `"Triggering device..."`.
@@ -68,7 +68,7 @@ TomTom_NAV4_Utilities-By-IkerXD1437/
 ## Prerequisites & Critical Warnings
 
 1. **Windows PC** with **`.NET Framework 4.8`** installed.
-2. **Rufus** *(recommended to flash the Magic SD in 3 seconds instead of waiting on `dd`)*: **[Download Rufus](https://rufus.ie/)**.
+2. **Rufus** *(recommended to flash the Magic SD in 3 seconds instead of waiting on `dd`)*.
 3. **TomTom `RNDIS` USB Drivers:** Install **MyDrive Connect** once on Windows so the network interface driver (`Remote NDIS Compatible Device`) is registered.
 4. **Spare MicroSD Card + Working Card Reader:** Needed only temporarily for the **Magic SD** recovery boot (minimum **64 MB**). Make sure your SD adapter has an intact physical **Lock** switch—broken or missing Lock tabs force Windows into Read-Only mode (`Incorrect function` error).
 5. **Data-Capable Micro-USB Cable:** Connect directly to a rear motherboard USB port.
@@ -194,12 +194,12 @@ https://github.com/user-attachments/assets/2d8c2d7c-b6a7-401f-ab3d-9bb58824bd87
 
 1. Ensure **MyDrive Connect is completely closed** (check system tray).
 2. Open **`TTActivator-v1.22/TTActivator.exe`**:
-   * Go to the **Tools** tab and click **Update Meta.txt**.
-   * Go to the **Map Downloader** tab.
-   * Select generation: **`nav4`**.
-   * Choose your region *(e.g., **Iberia** ~500–1000 MB, Southern Europe, or Europe)* and the latest version with a confirmed meta code *(verified: **`Iberia 1175.13264`**)*.
-   * **CRITICAL:** **UNCHECK `Auto-Extract`** and confirm **Yes** on the popup! If left checked, TTActivator unpacks raw files (`.dat`, `.sqlite`, `.meta`) and the `.ttpkg` installer will see an empty folder.
-   * Click **Download To Folder** to save the clean `.ttpkg` package (`Iberia_1175_13264_tmp_0.ttpkg`) to your PC.
+  - Go to the **Tools** tab and click **Update Meta.txt**.
+  - Go to the **Map Downloader** tab.
+  - Select generation: **`nav4`**.
+  - Choose your region *(e.g., **Iberia** ~500–1000 MB, Southern Europe, or Europe)* and the latest version with a confirmed meta code *(verified: **`Iberia 1175.13264`**)*.
+  - **CRITICAL:** **UNCHECK `Auto-Extract`** and confirm **Yes** on the popup! If left checked, TTActivator unpacks raw files (`.dat`, `.sqlite`, `.meta`) and the `.ttpkg` installer will see an empty folder.
+  - Click **Download To Folder** to save the clean `.ttpkg` package (`Iberia_1175_13264_tmp_0.ttpkg`) to your PC.
 
 | 1. Uncheck `Auto-Extract` (`nav4` / `1175`) | 2. Clean `.ttpkg` Package Downloaded |
 | :---: | :---: |
@@ -224,21 +224,21 @@ Once the PC finishes at **100%**, the TomTom screen usually stays spinning indef
 
 Map packages only include road speed limits—TomTom Speedcams are installed separately as `.ttpkg` files:
 
-* **Method A (TTActivator Live Download):** Use the **Safety Cam Downloader** tab inside `TTActivator.exe` to download and push speedcams over USB.
-* **Method B (Community Offline Speedcam Pack — Recommended if TomTom servers return empty `0 KB` files):**
-  1. Download **[`17 22-10-2026.rar` (MEGA)](https://mega.nz/file/eVhnBawJ#M-GuNkL7w-6RT8rfm9AsUagUY43Z6GhZ7zDgQgxiU-w)** and extract it (contains 31 European country `.ttpkg` packages such as `safety-cam-es-premium-22-10-2026.ttpkg`, `safety-cam-pt-premium-22-10-2026.ttpkg`, `safety-cam-fr-premium-22-10-2026.ttpkg`, etc.).
+- **Method A (TTActivator Live Download):** Use the **Safety Cam Downloader** tab inside `TTActivator.exe` to download and push speedcams over USB.
+- **Method B (Community Offline Speedcam Pack — Recommended if TomTom servers return empty `0 KB` files):**
+  1. Download **`17 22-10-2026.rar`** from **[GitHub Releases](../../releases)** and extract it (contains 31 European country `.ttpkg` packages such as `safety-cam-es-premium-22-10-2026.ttpkg`, `safety-cam-pt-premium-22-10-2026.ttpkg`, `safety-cam-fr-premium-22-10-2026.ttpkg`, etc.).
   2. With **MyDrive Connect** closed and the TomTom connected via USB, either:
-     * Open **TTActivator → NAV3/NAV4 Tools → `Install TT Package Files`** and select only the country `.ttpkg` files you need, **OR**
-     * Place the desired `.ttpkg` files in the same folder as **`Install_All_ttpkg_nav4.exe`** (`Install_All_ttpkg_nav4 (Extras)/`) and run it to batch-install all of them at once.
-* **Method C (`download_speedcam_1.7.exe` from `(Extras)`):**
+    - Open **TTActivator → NAV3/NAV4 Tools → `Install TT Package Files`** and select only the country `.ttpkg` files you need, **OR**
+    - Place the desired `.ttpkg` files in the same folder as **`Install_All_ttpkg_nav4.exe`** (`Install_All_ttpkg_nav4 (Extras)/`) and run it to batch-install all of them at once.
+- **Method C (`download_speedcam_1.7.exe` from `(Extras)`):**
   1. Ensure **MyDrive Connect** is closed.
   2. Open `Install_All_ttpkg_nav4 (Extras)/` and run **`download_speedcam_1.7.exe`** to download your region's `.ttpkg` speedcam files, then run **`Install_All_ttpkg_nav4.exe`** in the same folder.
 
 > [!NOTE]
-> **TomTom Speedcam Server Outages (Empty `0 KB` Files):** TomTom's official speedcam servers intermittently fail and return empty (`0 KB`) `.ttpkg` files on certain days in both **TTActivator** and **`download_speedcam_1.7.exe`**. If a region downloads empty, use **Method B** above or check the [official TTActivator GPSurl thread](https://www.gpsurl.com/tomtom-open-tools-and-tweaks/247170-ttactivator-windows-macos-linux.html) for recent community mirror packs.
+> **TomTom Speedcam Server Outages (Empty `0 KB` Files):** TomTom's official speedcam servers intermittently fail and return empty (`0 KB`) `.ttpkg` files on certain days in both **TTActivator** and **`download_speedcam_1.7.exe`**. If a region downloads empty, use **Method B** above from **[GitHub Releases](../../releases)**.
 
-* After installing speedcams, if the GPS stays spinning on *"Updating..."* after 100%, unplug USB and perform a **20–30s drum-roll Hard Reset**.
-* Enable alerts in **Menu → Settings → Sounds & Warnings → Speed Camera Warnings**.
+- After installing speedcams, if the GPS stays spinning on *"Updating..."* after 100%, unplug USB and perform a **20–30s drum-roll Hard Reset**.
+- Enable alerts in **Menu → Settings → Sounds & Warnings → Speed Camera Warnings**.
 
 ---
 
@@ -257,7 +257,7 @@ Map packages only include road speed limits—TomTom Speedcams are installed sep
 | **`dd: Permission denied` or extremely slow Magic SD write (~8 KB/s)** | `Nav4Free.bat` not run as Admin, or `dd` using tiny 512-byte blocks | Run `Nav4Free.bat` **as Administrator**, or flash `files/MSTMS_NAV4Free.img` directly with **Rufus** (~3 seconds). |
 | **No files appear when clicking `Install TT Package Files`** | `Auto-Extract` was enabled in TTActivator | Uncheck **Auto-Extract** in Map Downloader and re-download so the file stays `.ttpkg`. |
 | **"Not enough space" & delete button is grayed out** | Factory map fills internal memory; TTActivator blocks deletion | Delete the old map + its `DCT_*.meta` certificate directly inside the **Team MSTMS** app on the TomTom screen (Phase 2). |
-| **Speedcam `.ttpkg` downloads empty (`0 KB`)** | Intermittent TomTom speedcam server outage | Use the **[Community Europe Speedcam Pack (`22-10-2026`)](https://mega.nz/file/eVhnBawJ#M-GuNkL7w-6RT8rfm9AsUagUY43Z6GhZ7zDgQgxiU-w)** or grab a mirror from the [TTActivator GPSurl thread](https://www.gpsurl.com/tomtom-open-tools-and-tweaks/247170-ttactivator-windows-macos-linux.html). |
+| **Speedcam `.ttpkg` downloads empty (`0 KB`)** | Intermittent TomTom speedcam server outage | Download the offline **Community Europe Speedcam Pack (`17 22-10-2026.rar`)** from **[GitHub Releases](../../releases)**. |
 | **Device not responding / connection error** | MyDrive Connect is hijacking the RNDIS port | Quit **MyDrive Connect** from the Windows system tray and Task Manager, then reconnect USB. |
 | **TomTom stuck spinning on "Updating..."** | Normal NAV4 behavior after 100% `.ttpkg` transfer | Unplug USB and hold Power for **20–30s** until the **drum-roll** sound (Hard Reset). |
 | **Windows Defender deletes `TTActivator.exe`** | Standard false positive on patching tools | Add the extracted folder to **Windows Security → Exclusions**. |
